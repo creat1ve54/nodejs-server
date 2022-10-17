@@ -1,6 +1,6 @@
 const { Post } = require('../models/models')
 const uuid = require('uuid')
-const path = require('node:path')
+const path = require('path')
 
 
 class PostsController {
