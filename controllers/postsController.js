@@ -29,7 +29,7 @@ class PostsController {
                 })
 
                 await newPostWithImage.save()
-                res.json(newPostWithImage, { message: 'Пост создан' })
+                return res.json(newPostWithImage)
             }
 
             const newPostWithoutImage = new Post({
@@ -39,7 +39,7 @@ class PostsController {
             })
 
             await newPostWithoutImage.save()
-            res.json(newPostWithoutImage, { message: 'Пост создан' })
+            return res.json(newPostWithoutImage)
         } catch (error) {
             return res.json({ message: 'Что-то пошло не так' })
         }
